@@ -1,4 +1,5 @@
-﻿<maui:MauiWinUIApplication
+﻿<!-- 定义一个MauiWinUIApplication，类名为AIIntegrator.WinUI.App -->
+<maui:MauiWinUIApplication
     x:Class="AIIntegrator.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

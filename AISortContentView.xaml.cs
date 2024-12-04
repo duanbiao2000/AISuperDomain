@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 using System.Text;
-
+/* 在.NET MAUI项目中，`.xaml.cs`文件是由XAML文件生成的，它们是C#文件，用于实现XAML文件中定义的UI逻辑。这些文件通常包含在`.csproj`文件中，并且可以通过Visual Studio等IDE自动生成。在XAML文件中定义的UI元素和布局会在`.xaml.cs`文件中转换为C#代码，以便在运行时使用。因此，`.xaml.cs`文件是由XAML文件生成的，而不是手动编写的。 */
 namespace AIIntegrator;
 
 public partial class AISortContentView : ContentView

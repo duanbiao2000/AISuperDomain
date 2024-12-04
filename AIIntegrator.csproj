@@ -1,6 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <!-- 定义项目使用的SDK -->
   <PropertyGroup>
+    <!-- 定义目标框架 -->
     <TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+    <!-- 如果是Windows平台，则添加net7.0-windows10.0.19041.0框架 -->
     <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
     <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
     <!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
@@ -97,8 +100,11 @@
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
   </ItemGroup>
+  <!-- 定义一个名为PostBuild的Target，在PostBuildEvent之后执行 -->
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <!-- 执行一个命令，输出Release@@Any CPU -->
     <Exec Command="echo Release@@Any CPU&#xD;&#xA;if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (if &quot;$(PlatformName)&quot; == &quot;AnyCPU&quot; (&quot;$(ProjectDir)_Obfuscar\Obfuscar.Console.exe&quot; &quot;$(ProjectDir)_Obfuscar\obfuscar_Release_Any_CPU.xml&quot;&#xD;&#xA;xcopy /e /v &quot;$(ProjectDir)bin\Release\net7.0-windows10.0.19041.0\win10-x64\\Out\&quot; &quot;$(ProjectDir)bin\Release\net7.0-windows10.0.19041.0\win10-x64\&quot; /Y))" />
+    <!-- 执行一个命令，输出Debug@@Any CPU -->
     <Exec Command="echo Debug@@Any CPU&#xD;&#xA;if &quot;$(ConfigurationName)&quot; == &quot;Debug&quot; (if &quot;$(PlatformName)&quot; == &quot;AnyCPU&quot; (&quot;$(ProjectDir)_Obfuscar\Obfuscar.Console.exe&quot; &quot;$(ProjectDir)_Obfuscar\obfuscar_Debug_Any_CPU.xml&quot;&#xD;&#xA;xcopy /e /v &quot;$(ProjectDir)bin\Debug\net7.0-android\\Out\&quot; &quot;$(ProjectDir)bin\Debug\net7.0-android\&quot; /Y))" />
   </Target>
 </Project>

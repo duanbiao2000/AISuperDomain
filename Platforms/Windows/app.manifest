@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <!-- 定义程序集的标识符 -->
   <assemblyIdentity version="1.0.0.0" name="AIIntegrator.WinUI.app"/>
 
+  <!-- 定义应用程序的设置 -->
   <application xmlns="urn:schemas-microsoft-com:asm.v3">
     <windowsSettings>
       <!-- The combination of below two tags have the following effect:
            1) Per-Monitor for >= Windows 10 Anniversary Update
            2) System < Windows 10 Anniversary Update
       -->
+      <!-- 定义应用程序的DPI感知设置 -->
       <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true/PM</dpiAware>
+      <!-- 定义应用程序的DPI感知设置 -->
       <dpiAwareness xmlns="http://schemas.microsoft.com/SMI/2016/WindowsSettings">PerMonitorV2, PerMonitor</dpiAwareness>
     </windowsSettings>
   </application>

@@ -1,10 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义MSBuild项目文件，版本为当前版本，命名空间为http://schemas.microsoft.com/developer/msbuild/2003 -->
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- 定义属性组 -->
   <PropertyGroup>
+    <!-- 是否首次打开项目 -->
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
+    <!-- 活动调试框架 -->
     <ActiveDebugFramework>net7.0-windows10.0.19041.0</ActiveDebugFramework>
+    <!-- 活动调试配置文件 -->
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
+    <!-- UAP应用包构建模式 -->
     <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <!-- 是否显示所有应用 -->
     <AppxShowAllApps>False</AppxShowAllApps>
     <_LastSelectedProfileId>MSIX-win10-x64.pubxml</_LastSelectedProfileId>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
