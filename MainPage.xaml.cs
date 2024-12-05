@@ -1,4 +1,15 @@
-﻿namespace AIIntegrator;
+﻿/**
+ * This class represents the main page of the application, which serves as the entry point and central hub for user interaction.
+ * It manages various AI integrations, web views, and user prompts, providing a comprehensive interface for accessing and controlling AI tools.
+ * 
+ * The MainPage class includes several key components:
+ * - A collection of WebView objects for displaying different AI interfaces.
+ * - A dictionary for storing and managing AI configurations and prompts.
+ * - Methods for handling user input, navigating between AI tools, and processing data from AI responses.
+ * 
+ * This class is part of a larger application designed to facilitate AI integration and automation, providing users with a seamless experience across multiple AI platforms.
+ */
+namespace AIIntegrator;
 
 using System; // 引入System命名空间
 using System.Collections.Generic; // 引入System.Collections.Generic命名空间
@@ -9,6 +20,41 @@ using Newtonsoft.Json; // 引入Newtonsoft.Json命名空间
 using Newtonsoft.Json.Linq; // 引入Newtonsoft.Json.Linq命名空间
 using SixLabors.ImageSharp.Formats.Png; // 引入SixLabors.ImageSharp.Formats.Png命名空间
 
+/**
+ * This class represents the main page of the application, which serves as the entry point and central hub for user interaction.
+ * It manages various aspects such as AI platform selection, text input and editing, and interaction with web-based AI tools.
+ * The page includes functionality for loading different AI platforms, translating text, and merging AI-generated content.
+ * It also handles user prompts and settings, and provides options for checking for updates and accessing information about the application.
+ */
+/**
+ * Initializes the main page of the application, setting up the web views, configuration dictionaries,
+ * and event handlers for various user interactions.
+ * 
+ * This method performs the following tasks:
+ * 1. Initializes the web views and their visibility based on the window count configuration.
+ * 2. Loads AI platform URLs based on the stored platform names.
+ * 3. Sets up event handlers for text changes in the editor, selection of AI platforms,
+ *    and other UI interactions.
+ * 4. Manages the display and interaction of prompts and settings.
+ * 
+ * @param None
+ * @return None
+ */
+/**
+ * This class represents the main page of the application, which serves as the entry point and central hub for user interaction.
+ * It manages the configuration and prompts for various AI platforms, handles user input, and controls the visibility of web views.
+ * The class includes methods for loading AI URLs, managing user prompts, and handling various user actions such as text editing, AI selection, and translation.
+ * It also includes JavaScript strings for interacting with web views and handling specific AI functionalities.
+ */
+/// <summary>
+/// Initializes the main page, setting up the web views and their configurations.
+/// </summary>
+public MainPage()
+{
+    InitializeComponent();
+
+    // ... (rest of the constructor code)
+}
 public partial class MainPage : ContentPage
 {
     const string js_poe_AiPaint_hide_aside_js =

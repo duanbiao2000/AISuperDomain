@@ -1,4 +1,14 @@
-﻿Any raw assets you want to be deployed with your application can be placed in
+﻿/**
+ * This directory is designated for placing any raw assets that should be deployed with the application.
+ * The deployment of these assets is automatically managed by the `MauiAsset` Build Action specified in the `.csproj` file.
+ * 
+ * The `MauiAsset` Build Action includes all files within this directory and its subdirectories, using a wildcard pattern.
+ * Each asset is assigned a LogicalName based on its directory structure and filename.
+ * 
+ * These assets become accessible after deployment and can be read using the Essentials `FileSystem.OpenAppPackageFileAsync` method.
+ * The provided `LoadMauiAsset` function demonstrates how to load and read the contents of an asset file.
+ */
+Any raw assets you want to be deployed with your application can be placed in
 this directory (and child directories). Deployment of the asset to your application
 is automatically handled by the following `MauiAsset` Build Action within your `.csproj`.
 
